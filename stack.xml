@@ -1,0 +1,13 @@
+<stack>
+  <version>0.0.1</version>
+  <description brief="axis_camera">
+    Contains basic Python drivers for accessing an Axis camera's MJPG stream.
+  </description>
+  <author>Updated by Robert Lynch</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/axis_camera</url>
+  <depend stack="ros_comm" />
+  <depend stack="common_msgs" />
+  <depend stack="camera_info_manager_py" />
+</stack>
