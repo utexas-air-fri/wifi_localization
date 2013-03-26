@@ -8,7 +8,7 @@ class Node():
 	def __init__(self):
 		pub = rospy.Publisher('wifi_data', WifiData)
 
-		r = rospy.Rate(1)
+		r = rospy.Rate(rospy.get_param('~rate', 1))
 		while not rospy.is_shutdown():
 			os.system("iwlist wlan0 scanning >> datatemp.txt")
 
@@ -22,7 +22,7 @@ class Node():
 			msg = WifiData()
 
 			for i in range(len(essids)):
-				if (essids[i] == "restricted.utexas.edu"):
+				if (essids[i] == rospy.get_param('~ssid', 'restricted.utexas.edu')):
 					temp = StrArr()			    
 					temp.MAC = addresses[i] 
 					temp.dB = signals[i]
