@@ -8,8 +8,6 @@ class Node():
 	def __init__(self):
 		pub = rospy.Publisher('wifi_data', WifiData)
 
-		msg = WifiData()
-
 		r = rospy.Rate(1)
 		while not rospy.is_shutdown():
 			os.system("iwlist wlan0 scanning >> datatemp.txt")
@@ -20,6 +18,8 @@ class Node():
 			essids = re.findall("ESSID:\"(.*)\"", wifiraw)
 			addresses = re.findall("Address: ([0-9A-F:]{17})", wifiraw)
 			signals = re.findall("Signal level=.*?([0-9]+)", wifiraw)
+
+			msg = WifiData()
 
 			for i in range(len(essids)):
 				if (essids[i] == "restricted.utexas.edu"):
