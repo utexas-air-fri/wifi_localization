@@ -2,6 +2,7 @@
 
 import roslib; roslib.load_manifest('wifi_lookup')
 import rospy, os, re
+#from std_msgs.msg import String
 from wifi_lookup.msg import WifiData, StrArr
 
 class Node():
@@ -17,15 +18,18 @@ class Node():
 			wifiraw = open("datatemp.txt").read()
 			os.remove("datatemp.txt")
 
+			# Sorry not sorry
 			essids = re.findall("ESSID:\"(.*)\"", wifiraw)
 			addresses = re.findall("Address: ([0-9A-F:]{17})", wifiraw)
 			signals = re.findall("Signal level=.*?([0-9]+)", wifiraw)
-
+			#spots = ["SSID: " + addresses[i] + "\nRATE: " + signals[i] for i in range(len(essids)) if essids[i] =="restricted.utexas.edu"]
+			hspots = []
 			for i in range(len(essids)):
-				if (essids[i] == "restricted.utexas.edu"):
+				if essids[i] == "restricted.uteaxs.edu":
 					temp = StrArr()			    
 					temp.MAC = addresses[i] 
 					temp.dB = signals[i]
+					print addresses[i]
 					msg.HotSpots.append(temp)
 
 			pub.publish(msg)
@@ -33,7 +37,5 @@ class Node():
 
 if __name__ == '__main__':
 	rospy.init_node('wifi_lookup')
-	try:
-		n = Node()
-	except rospy.ROSInterruptException: pass
+	Node()
 	
