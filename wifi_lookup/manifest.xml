@@ -1,0 +1,15 @@
+<package>
+  <description brief="wifi_lookup">
+
+     Reads in wifi data by calling iwlist and uses python to filter and format the data into a ros msg
+
+  </description>
+  <author>Josh Eversmann and Robert Lynch</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://github.com/BobertForever/bwi</url>
+
+
+</package>
+
+

@@ -1,0 +1,17 @@
+<package>
+  <description brief="asg1">
+
+     asg1
+
+  </description>
+  <author>FRI</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/asg1</url>
+
+  <depend package="geometry_msgs"/>
+  <depend package="cmvision"/>
+
+</package>
+
+

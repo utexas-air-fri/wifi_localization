@@ -1,0 +1,50 @@
+/*
+By Josh Eversmann, jme2347 
+   and Robert Lynch, rml953
+*/
+
+#include "ros/ros.h"
+#include "geometry_msgs/Twist.h"
+#include "cmvision/Blobs.h"
+
+// This method is called whenever a blob message is received
+void blobCallback(const cmvision::Blobs::ConstPtr& msg){
+	
+	// This is the output velocity that we will publish
+	geometry_msgs::Twist output;
+
+	if (msg->blob_count > 0){
+
+		double largeArea = 400, centerX = 320;
+
+		for (int i = 0; i < msg->blob_count; i++){
+
+			if(msg->blobs[i].area > largeArea) {
+				largeArea = msg->blobs[i].area;
+			}
+		
+			if(largeArea > 400) {
+					std::cout << "Detected blob " << i << " with area " << msg->blobs[i].area << std::endl;
+			}
+		}
+	}
+}
+
+
+int main(int argc, char **argv){
+
+	ros::init(argc, argv, "follower");
+	ros::NodeHandle n;
+
+	// subscribe to blob messages and call blobCallback when they are received
+	ros::Subscriber sub = n.subscribe("blobs", 1000, blobCallback);   
+
+	ros::Rate loop_rate(10);
+
+	ros::spin();
+
+
+	return 0;
+}
+
+
