@@ -2,7 +2,7 @@
 
 import roslib; roslib.load_manifest('wifi_lookup')
 import rospy, os, re
-from wifi_lookup.msg import WifiData, StrArr
+from wifi_lookup.msg import WifiData, Wifi
 
 class Node():
 	def __init__(self):
@@ -23,11 +23,12 @@ class Node():
 
 			for i in range(len(essids)):
 				if (essids[i] == rospy.get_param('~ssid', 'restricted.utexas.edu')):
-					temp = StrArr()			    
+					temp = Wifi()			    
 					temp.MAC = addresses[i] 
-					temp.dB = signals[i]
+					temp.dB = int(signals[i])
 					msg.HotSpots.append(temp)
 
+			msg.length = len(msg.HotSpots)
 			pub.publish(msg)
 			r.sleep()
 

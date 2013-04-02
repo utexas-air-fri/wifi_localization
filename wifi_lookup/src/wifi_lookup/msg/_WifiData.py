@@ -7,19 +7,20 @@ import struct
 import wifi_lookup.msg
 
 class WifiData(genpy.Message):
-  _md5sum = "a389391568f546e8de0a32553512a637"
+  _md5sum = "cc804de46fe3392a93dadc42f8c34e28"
   _type = "wifi_lookup/WifiData"
   _has_header = False #flag to mark the presence of a Header object
-  _full_text = """StrArr[] HotSpots
+  _full_text = """uint32 length
+Wifi[] HotSpots
 
 ================================================================================
-MSG: wifi_lookup/StrArr
+MSG: wifi_lookup/Wifi
 string MAC
-string dB
+uint32 dB
 
 """
-  __slots__ = ['HotSpots']
-  _slot_types = ['wifi_lookup/StrArr[]']
+  __slots__ = ['length','HotSpots']
+  _slot_types = ['uint32','wifi_lookup/Wifi[]']
 
   def __init__(self, *args, **kwds):
     """
@@ -29,7 +30,7 @@ string dB
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       HotSpots
+       length,HotSpots
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -38,9 +39,12 @@ string dB
     if args or kwds:
       super(WifiData, self).__init__(*args, **kwds)
       #message fields cannot be None, assign default values for those that are
+      if self.length is None:
+        self.length = 0
       if self.HotSpots is None:
         self.HotSpots = []
     else:
+      self.length = 0
       self.HotSpots = []
 
   def _get_types(self):
@@ -55,6 +59,7 @@ string dB
     :param buff: buffer, ``StringIO``
     """
     try:
+      buff.write(_struct_I.pack(self.length))
       length = len(self.HotSpots)
       buff.write(_struct_I.pack(length))
       for val1 in self.HotSpots:
@@ -64,12 +69,7 @@ string dB
           _x = _x.encode('utf-8')
           length = len(_x)
         buff.write(struct.pack('<I%ss'%length, length, _x))
-        _x = val1.dB
-        length = len(_x)
-        if python3 or type(_x) == unicode:
-          _x = _x.encode('utf-8')
-          length = len(_x)
-        buff.write(struct.pack('<I%ss'%length, length, _x))
+        buff.write(_struct_I.pack(val1.dB))
     except struct.error as se: self._check_types(se)
     except TypeError as te: self._check_types(te)
 
@@ -84,10 +84,13 @@ string dB
       end = 0
       start = end
       end += 4
+      (self.length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += 4
       (length,) = _struct_I.unpack(str[start:end])
       self.HotSpots = []
       for i in range(0, length):
-        val1 = wifi_lookup.msg.StrArr()
+        val1 = wifi_lookup.msg.Wifi()
         start = end
         end += 4
         (length,) = _struct_I.unpack(str[start:end])
@@ -99,13 +102,7 @@ string dB
           val1.MAC = str[start:end]
         start = end
         end += 4
-        (length,) = _struct_I.unpack(str[start:end])
-        start = end
-        end += length
-        if python3:
-          val1.dB = str[start:end].decode('utf-8')
-        else:
-          val1.dB = str[start:end]
+        (val1.dB,) = _struct_I.unpack(str[start:end])
         self.HotSpots.append(val1)
       return self
     except struct.error as e:
@@ -119,6 +116,7 @@ string dB
     :param numpy: numpy python module
     """
     try:
+      buff.write(_struct_I.pack(self.length))
       length = len(self.HotSpots)
       buff.write(_struct_I.pack(length))
       for val1 in self.HotSpots:
@@ -128,12 +126,7 @@ string dB
           _x = _x.encode('utf-8')
           length = len(_x)
         buff.write(struct.pack('<I%ss'%length, length, _x))
-        _x = val1.dB
-        length = len(_x)
-        if python3 or type(_x) == unicode:
-          _x = _x.encode('utf-8')
-          length = len(_x)
-        buff.write(struct.pack('<I%ss'%length, length, _x))
+        buff.write(_struct_I.pack(val1.dB))
     except struct.error as se: self._check_types(se)
     except TypeError as te: self._check_types(te)
 
@@ -149,10 +142,13 @@ string dB
       end = 0
       start = end
       end += 4
+      (self.length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += 4
       (length,) = _struct_I.unpack(str[start:end])
       self.HotSpots = []
       for i in range(0, length):
-        val1 = wifi_lookup.msg.StrArr()
+        val1 = wifi_lookup.msg.Wifi()
         start = end
         end += 4
         (length,) = _struct_I.unpack(str[start:end])
@@ -164,13 +160,7 @@ string dB
           val1.MAC = str[start:end]
         start = end
         end += 4
-        (length,) = _struct_I.unpack(str[start:end])
-        start = end
-        end += length
-        if python3:
-          val1.dB = str[start:end].decode('utf-8')
-        else:
-          val1.dB = str[start:end]
+        (val1.dB,) = _struct_I.unpack(str[start:end])
         self.HotSpots.append(val1)
       return self
     except struct.error as e:
