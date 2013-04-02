@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup
+CMAKE_SOURCE_DIR = /nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/build
+CMAKE_BINARY_DIR = /nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup/build
 
 # Utility rule file for ROSBUILD_genmsg_cpp.
 
@@ -43,28 +43,28 @@ CMAKE_BINARY_DIR = /nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/build
 include CMakeFiles/ROSBUILD_genmsg_cpp.dir/progress.make
 
 CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/wifi_lookup/WifiData.h
-CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/wifi_lookup/StrArr.h
+CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/wifi_lookup/Wifi.h
 
 ../msg_gen/cpp/include/wifi_lookup/WifiData.h: ../msg/WifiData.msg
 ../msg_gen/cpp/include/wifi_lookup/WifiData.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
 ../msg_gen/cpp/include/wifi_lookup/WifiData.h: /opt/ros/groovy/lib/roslib/gendeps
-../msg_gen/cpp/include/wifi_lookup/WifiData.h: ../msg/StrArr.msg
+../msg_gen/cpp/include/wifi_lookup/WifiData.h: ../msg/Wifi.msg
 ../msg_gen/cpp/include/wifi_lookup/WifiData.h: ../manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/wifi_lookup/WifiData.h"
-	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/msg/WifiData.msg
+	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup/msg/WifiData.msg
 
-../msg_gen/cpp/include/wifi_lookup/StrArr.h: ../msg/StrArr.msg
-../msg_gen/cpp/include/wifi_lookup/StrArr.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
-../msg_gen/cpp/include/wifi_lookup/StrArr.h: /opt/ros/groovy/lib/roslib/gendeps
-../msg_gen/cpp/include/wifi_lookup/StrArr.h: ../manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/wifi_lookup/StrArr.h"
-	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/msg/StrArr.msg
+../msg_gen/cpp/include/wifi_lookup/Wifi.h: ../msg/Wifi.msg
+../msg_gen/cpp/include/wifi_lookup/Wifi.h: /opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py
+../msg_gen/cpp/include/wifi_lookup/Wifi.h: /opt/ros/groovy/lib/roslib/gendeps
+../msg_gen/cpp/include/wifi_lookup/Wifi.h: ../manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/wifi_lookup/Wifi.h"
+	/opt/ros/groovy/share/roscpp/rosbuild/scripts/genmsg_cpp.py /nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup/msg/Wifi.msg
 
 ROSBUILD_genmsg_cpp: CMakeFiles/ROSBUILD_genmsg_cpp
 ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/wifi_lookup/WifiData.h
-ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/wifi_lookup/StrArr.h
+ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/wifi_lookup/Wifi.h
 ROSBUILD_genmsg_cpp: CMakeFiles/ROSBUILD_genmsg_cpp.dir/build.make
 .PHONY : ROSBUILD_genmsg_cpp
 
@@ -77,6 +77,6 @@ CMakeFiles/ROSBUILD_genmsg_cpp.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_genmsg_cpp.dir/clean
 
 CMakeFiles/ROSBUILD_genmsg_cpp.dir/depend:
-	cd /nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup /nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup /nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/build /nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/build /nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/build/CMakeFiles/ROSBUILD_genmsg_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup /nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup /nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup/build /nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup/build /nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup/build/CMakeFiles/ROSBUILD_genmsg_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_genmsg_cpp.dir/depend
 

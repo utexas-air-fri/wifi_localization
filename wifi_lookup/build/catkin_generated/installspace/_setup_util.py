@@ -42,7 +42,7 @@ import platform
 import sys
 
 # environment at generation time
-CMAKE_PREFIX_PATH = os.pathsep.join('/nishome/rlynch/ros/catkin_ws/devel;/opt/ros/groovy'.split(';'))
+CMAKE_PREFIX_PATH = os.pathsep.join('/nishome/jeversmann/ros/catkin_ws/devel;/opt/ros/groovy'.split(';'))
 CURRENT_WORKSPACE = os.path.dirname(__file__)
 
 CATKIN_MARKER_FILE = '.catkin'

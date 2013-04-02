@@ -6,7 +6,7 @@
 # Supported command line options:
 # --extend: skips the undoing of changes from a previously sourced setup file
 
-SETUP_UTIL="/nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/build/devel/_setup_util.py"
+SETUP_UTIL="/nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup/build/devel/_setup_util.py"
 
 if [ ! -f "$SETUP_UTIL" ]; then
   echo "Missing Python script: $SETUP_UTIL"

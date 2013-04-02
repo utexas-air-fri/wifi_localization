@@ -1,2 +1,0 @@
-string MAC
-string dB

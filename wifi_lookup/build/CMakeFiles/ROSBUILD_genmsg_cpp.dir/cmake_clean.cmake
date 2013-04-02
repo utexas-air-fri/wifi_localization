@@ -3,7 +3,7 @@ FILE(REMOVE_RECURSE
   "../src/wifi_lookup/msg"
   "CMakeFiles/ROSBUILD_genmsg_cpp"
   "../msg_gen/cpp/include/wifi_lookup/WifiData.h"
-  "../msg_gen/cpp/include/wifi_lookup/StrArr.h"
+  "../msg_gen/cpp/include/wifi_lookup/Wifi.h"
 )
 
 # Per-language clean rules from dependency scanning.
