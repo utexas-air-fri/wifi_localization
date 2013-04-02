@@ -1,1 +1,2 @@
-StrArr[] HotSpots
+uint32 length
+Wifi[] HotSpots
