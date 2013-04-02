@@ -3,14 +3,14 @@
 
 # Relative path conversion top directories.
 SET(CMAKE_RELATIVE_PATH_TOP_SOURCE "/usr/src/gtest")
-SET(CMAKE_RELATIVE_PATH_TOP_BINARY "/nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/build")
+SET(CMAKE_RELATIVE_PATH_TOP_BINARY "/nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup/build")
 
 # Force unix paths in dependencies.
 SET(CMAKE_FORCE_UNIX_PATHS 1)
 
 # The C and CXX include file search paths:
 SET(CMAKE_C_INCLUDE_PATH
-  "/nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/include"
+  "/nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup/include"
   "/usr/src/gtest/include"
   "/usr/src/gtest"
   )

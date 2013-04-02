@@ -1,7 +1,7 @@
 DEVELSPACE = True
 INSTALLSPACE = False
 
-CATKIN_DEVEL_PREFIX = '/nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/build/devel'
+CATKIN_DEVEL_PREFIX = '/nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup/build/devel'
 
 CATKIN_GLOBAL_BIN_DESTINATION = 'bin'
 CATKIN_GLOBAL_ETC_DESTINATION = 'etc'
@@ -19,12 +19,12 @@ CATKIN_PACKAGE_LIBEXEC_DESTINATION = ''
 CATKIN_PACKAGE_PYTHON_DESTINATION = ''
 CATKIN_PACKAGE_SHARE_DESTINATION = ''
 
-CMAKE_BINARY_DIR = '/nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/build'
-CMAKE_CURRENT_BINARY_DIR = '/nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/build'
-CMAKE_CURRENT_SOURCE_DIR = '/nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup'
+CMAKE_BINARY_DIR = '/nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup/build'
+CMAKE_CURRENT_BINARY_DIR = '/nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup/build'
+CMAKE_CURRENT_SOURCE_DIR = '/nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup'
 CMAKE_INSTALL_PREFIX = '/usr/local'
-CMAKE_SOURCE_DIR = '/nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup'
+CMAKE_SOURCE_DIR = '/nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup'
 
 PROJECT_NAME = 'wifi_lookup'
-PROJECT_BINARY_DIR = '/nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/build'
-PROJECT_SOURCE_DIR = '/nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup'
+PROJECT_BINARY_DIR = '/nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup/build'
+PROJECT_SOURCE_DIR = '/nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup'

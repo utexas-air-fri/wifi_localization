@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup
+CMAKE_SOURCE_DIR = /nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/build
+CMAKE_BINARY_DIR = /nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup/build
 
 # Utility rule file for ROSBUILD_genmsg_py.
 
@@ -45,32 +45,32 @@ include CMakeFiles/ROSBUILD_genmsg_py.dir/progress.make
 CMakeFiles/ROSBUILD_genmsg_py: ../src/wifi_lookup/msg/__init__.py
 
 ../src/wifi_lookup/msg/__init__.py: ../src/wifi_lookup/msg/_WifiData.py
-../src/wifi_lookup/msg/__init__.py: ../src/wifi_lookup/msg/_StrArr.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/build/CMakeFiles $(CMAKE_PROGRESS_1)
+../src/wifi_lookup/msg/__init__.py: ../src/wifi_lookup/msg/_Wifi.py
+	$(CMAKE_COMMAND) -E cmake_progress_report /nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/wifi_lookup/msg/__init__.py"
-	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --initpy /nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/msg/WifiData.msg /nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/msg/StrArr.msg
+	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --initpy /nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup/msg/WifiData.msg /nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup/msg/Wifi.msg
 
 ../src/wifi_lookup/msg/_WifiData.py: ../msg/WifiData.msg
 ../src/wifi_lookup/msg/_WifiData.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
 ../src/wifi_lookup/msg/_WifiData.py: /opt/ros/groovy/lib/roslib/gendeps
-../src/wifi_lookup/msg/_WifiData.py: ../msg/StrArr.msg
+../src/wifi_lookup/msg/_WifiData.py: ../msg/Wifi.msg
 ../src/wifi_lookup/msg/_WifiData.py: ../manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/wifi_lookup/msg/_WifiData.py"
-	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/msg/WifiData.msg
+	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup/msg/WifiData.msg
 
-../src/wifi_lookup/msg/_StrArr.py: ../msg/StrArr.msg
-../src/wifi_lookup/msg/_StrArr.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
-../src/wifi_lookup/msg/_StrArr.py: /opt/ros/groovy/lib/roslib/gendeps
-../src/wifi_lookup/msg/_StrArr.py: ../manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/build/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/wifi_lookup/msg/_StrArr.py"
-	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/msg/StrArr.msg
+../src/wifi_lookup/msg/_Wifi.py: ../msg/Wifi.msg
+../src/wifi_lookup/msg/_Wifi.py: /opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py
+../src/wifi_lookup/msg/_Wifi.py: /opt/ros/groovy/lib/roslib/gendeps
+../src/wifi_lookup/msg/_Wifi.py: ../manifest.xml
+	$(CMAKE_COMMAND) -E cmake_progress_report /nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../src/wifi_lookup/msg/_Wifi.py"
+	/opt/ros/groovy/share/rospy/rosbuild/scripts/genmsg_py.py --noinitpy /nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup/msg/Wifi.msg
 
 ROSBUILD_genmsg_py: CMakeFiles/ROSBUILD_genmsg_py
 ROSBUILD_genmsg_py: ../src/wifi_lookup/msg/__init__.py
 ROSBUILD_genmsg_py: ../src/wifi_lookup/msg/_WifiData.py
-ROSBUILD_genmsg_py: ../src/wifi_lookup/msg/_StrArr.py
+ROSBUILD_genmsg_py: ../src/wifi_lookup/msg/_Wifi.py
 ROSBUILD_genmsg_py: CMakeFiles/ROSBUILD_genmsg_py.dir/build.make
 .PHONY : ROSBUILD_genmsg_py
 
@@ -83,6 +83,6 @@ CMakeFiles/ROSBUILD_genmsg_py.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_genmsg_py.dir/clean
 
 CMakeFiles/ROSBUILD_genmsg_py.dir/depend:
-	cd /nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup /nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup /nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/build /nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/build /nishome/rlynch/ros/rosbuild_ws/class-code/wifi_lookup/build/CMakeFiles/ROSBUILD_genmsg_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup /nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup /nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup/build /nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup/build /nishome/jeversmann/ros/rosbuild_ws/class-code/bwi/wifi_lookup/build/CMakeFiles/ROSBUILD_genmsg_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_genmsg_py.dir/depend
 
