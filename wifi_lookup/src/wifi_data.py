@@ -4,7 +4,7 @@ import roslib; roslib.load_manifest('wifi_lookup')
 import rospy, os, re
 from wifi_lookup.msg import WifiData, Wifi
 
-class Node():
+class DataNode():
 	def __init__(self):
 		pub = rospy.Publisher('wifi_data', WifiData)
 
@@ -33,8 +33,8 @@ class Node():
 			r.sleep()
 
 if __name__ == '__main__':
-	rospy.init_node('wifi_lookup')
+	rospy.init_node('wifi_data')
 	try:
-		n = Node()
+		node = DataNode()
 	except rospy.ROSInterruptException: pass
 	
