@@ -1,0 +1,17 @@
+<package>
+  <description brief="ardrone_fly">
+
+     ardrone flight controllers
+
+  </description>
+  <author>FRI</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/asg1</url>
+
+  <depend package="geometry_msgs"/>
+  <depend package="cmvision"/>
+  <depend package="ardrone_autonomy"/>
+</package>
+
+
