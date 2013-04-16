@@ -42,9 +42,9 @@ void joyCallback(const sensor_msgs::Joy::ConstPtr& msg){
 
 	// Mode toggles
 	if(msg->buttons[9] == 1)
-		mode = 1;
+		mode = 0;
 	if(msg->buttons[8] == 1)
-		mode = 1; // CHANGE TO 1 TO RE-ENABLE ABSOLUTE CONTROL
+		mode = 0; // CHANGE TO 1 TO RE-ENABLE ABSOLUTE CONTROL
 
 	// Relative control	
 	if(mode == 0) {
@@ -86,7 +86,6 @@ void joyCallback(const sensor_msgs::Joy::ConstPtr& msg){
 	if(msg->buttons[2] == 1) {
 		output.linear.x = 0;
 		output.linear.y = 0;
-		output.linear.z = 0;
 		output.angular.z = 0;
 	}
 	
@@ -124,4 +123,3 @@ int main(int argc, char **argv){
 
 	return 0;
 }
-
