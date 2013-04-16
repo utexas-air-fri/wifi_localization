@@ -17,7 +17,7 @@ To run this node:
 * Start the willmote drivers  
 ```
     rosrun wiimote wiimote_node.py
-````
+```
 * Start the controller code
 
 optionally, you can run the launch file which starts all of these  
