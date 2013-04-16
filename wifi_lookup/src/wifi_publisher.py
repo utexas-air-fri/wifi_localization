@@ -1,13 +1,12 @@
 #!/usr/bin/env python
 
 import roslib; roslib.load_manifest('wifi_lookup')
-import rospy, os, re, pickle
+import rospy, pickle
 from wifi_lookup.msg import WifiData, Wifi
 
-#1st goal, Completed, create a method to build a serialized database which is shared between
-#	different call-time instances of the node
-#2nd goal, redefine the database to perform the two-dimensional hash lookup
-#3rd goal, create member method which publishes location based on lookup and input message
+#1st goal, Completed, load database from other node
+#2nd goal, Create publisher framework for pose messages
+#3rd goal, perform 2-D lookup and set comprehension to create location
 dbLoc = "database.pk"
 
 #create proper handler function to append new hotspots to data object
@@ -22,6 +21,7 @@ def make():
 	except: 
 		database = {}
 
+#Add publisher ROS things
 if __name__=='__main__':
 	rospy.init_node('wifi_publisher')
 	try:
