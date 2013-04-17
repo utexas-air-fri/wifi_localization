@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bwi/ros/rosbuild_ws/ardrone_fly
+CMAKE_SOURCE_DIR = /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bwi/ros/rosbuild_ws/ardrone_fly/build
+CMAKE_BINARY_DIR = /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build
 
 # Utility rule file for test-results-run.
 
@@ -57,6 +57,6 @@ CMakeFiles/test-results-run.dir/clean:
 .PHONY : CMakeFiles/test-results-run.dir/clean
 
 CMakeFiles/test-results-run.dir/depend:
-	cd /home/bwi/ros/rosbuild_ws/ardrone_fly/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bwi/ros/rosbuild_ws/ardrone_fly /home/bwi/ros/rosbuild_ws/ardrone_fly /home/bwi/ros/rosbuild_ws/ardrone_fly/build /home/bwi/ros/rosbuild_ws/ardrone_fly/build /home/bwi/ros/rosbuild_ws/ardrone_fly/build/CMakeFiles/test-results-run.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build/CMakeFiles/test-results-run.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/test-results-run.dir/depend
 

@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/bwi/ros/rosbuild_ws/ardrone_fly/build/devel/setup.sh
+    local-name: /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build/devel/setup.sh

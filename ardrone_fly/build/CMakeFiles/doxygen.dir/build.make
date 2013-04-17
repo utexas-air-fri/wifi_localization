@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bwi/ros/rosbuild_ws/ardrone_fly
+CMAKE_SOURCE_DIR = /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bwi/ros/rosbuild_ws/ardrone_fly/build
+CMAKE_BINARY_DIR = /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build
 
 # Utility rule file for doxygen.
 
@@ -43,7 +43,7 @@ CMAKE_BINARY_DIR = /home/bwi/ros/rosbuild_ws/ardrone_fly/build
 include CMakeFiles/doxygen.dir/progress.make
 
 CMakeFiles/doxygen:
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/bwi/ros/rosbuild_ws/ardrone_fly/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "doxygen found"
 
 doxygen: CMakeFiles/doxygen
@@ -59,6 +59,6 @@ CMakeFiles/doxygen.dir/clean:
 .PHONY : CMakeFiles/doxygen.dir/clean
 
 CMakeFiles/doxygen.dir/depend:
-	cd /home/bwi/ros/rosbuild_ws/ardrone_fly/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bwi/ros/rosbuild_ws/ardrone_fly /home/bwi/ros/rosbuild_ws/ardrone_fly /home/bwi/ros/rosbuild_ws/ardrone_fly/build /home/bwi/ros/rosbuild_ws/ardrone_fly/build /home/bwi/ros/rosbuild_ws/ardrone_fly/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build/CMakeFiles/doxygen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/doxygen.dir/depend
 
