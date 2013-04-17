@@ -1,7 +1,7 @@
 DEVELSPACE = True
 INSTALLSPACE = False
 
-CATKIN_DEVEL_PREFIX = '/home/bwi/ros/rosbuild_ws/ardrone_fly/build/devel'
+CATKIN_DEVEL_PREFIX = '/home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build/devel'
 
 CATKIN_GLOBAL_BIN_DESTINATION = 'bin'
 CATKIN_GLOBAL_ETC_DESTINATION = 'etc'
@@ -19,12 +19,12 @@ CATKIN_PACKAGE_LIBEXEC_DESTINATION = ''
 CATKIN_PACKAGE_PYTHON_DESTINATION = ''
 CATKIN_PACKAGE_SHARE_DESTINATION = ''
 
-CMAKE_BINARY_DIR = '/home/bwi/ros/rosbuild_ws/ardrone_fly/build'
-CMAKE_CURRENT_BINARY_DIR = '/home/bwi/ros/rosbuild_ws/ardrone_fly/build'
-CMAKE_CURRENT_SOURCE_DIR = '/home/bwi/ros/rosbuild_ws/ardrone_fly'
+CMAKE_BINARY_DIR = '/home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build'
+CMAKE_CURRENT_BINARY_DIR = '/home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build'
+CMAKE_CURRENT_SOURCE_DIR = '/home/bwi/ros/rosbuild_ws/bwi/ardrone_fly'
 CMAKE_INSTALL_PREFIX = '/usr/local'
-CMAKE_SOURCE_DIR = '/home/bwi/ros/rosbuild_ws/ardrone_fly'
+CMAKE_SOURCE_DIR = '/home/bwi/ros/rosbuild_ws/bwi/ardrone_fly'
 
 PROJECT_NAME = 'ardrone_fly'
-PROJECT_BINARY_DIR = '/home/bwi/ros/rosbuild_ws/ardrone_fly/build'
-PROJECT_SOURCE_DIR = '/home/bwi/ros/rosbuild_ws/ardrone_fly'
+PROJECT_BINARY_DIR = '/home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build'
+PROJECT_SOURCE_DIR = '/home/bwi/ros/rosbuild_ws/bwi/ardrone_fly'

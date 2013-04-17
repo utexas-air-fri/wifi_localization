@@ -3,7 +3,8 @@
 
 CMakeFiles/wiimoteFly.dir/src/wiimoteFly.cpp.o
  /home/bwi/ros/rosbuild_ws/ardrone_autonomy/msg_gen/cpp/include/ardrone_autonomy/Navdata.h
- /home/bwi/ros/rosbuild_ws/ardrone_fly/src/wiimoteFly.cpp
+ /home/bwi/ros/rosbuild_ws/ardrone_autonomy/srv_gen/cpp/include/ardrone_autonomy/FlightAnim.h
+ /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/src/wiimoteFly.cpp
  /opt/ros/groovy/include/XmlRpcDecl.h
  /opt/ros/groovy/include/XmlRpcValue.h
  /opt/ros/groovy/include/geometry_msgs/Twist.h

@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bwi/ros/rosbuild_ws/ardrone_fly
+CMAKE_SOURCE_DIR = /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bwi/ros/rosbuild_ws/ardrone_fly/build
+CMAKE_BINARY_DIR = /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ballFollow.dir/depend.make
@@ -82,17 +82,17 @@ CMakeFiles/ballFollow.dir/src/ballFollow.cpp.o: /home/bwi/ros/rosbuild_ws/ardron
 CMakeFiles/ballFollow.dir/src/ballFollow.cpp.o: /home/bwi/ros/rosbuild_ws/cmvision/msg_gen/generated
 CMakeFiles/ballFollow.dir/src/ballFollow.cpp.o: /home/bwi/ros/rosbuild_ws/ardrone_autonomy/msg_gen/generated
 CMakeFiles/ballFollow.dir/src/ballFollow.cpp.o: /home/bwi/ros/rosbuild_ws/ardrone_autonomy/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/bwi/ros/rosbuild_ws/ardrone_fly/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/ballFollow.dir/src/ballFollow.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/ballFollow.dir/src/ballFollow.cpp.o -c /home/bwi/ros/rosbuild_ws/ardrone_fly/src/ballFollow.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/ballFollow.dir/src/ballFollow.cpp.o -c /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/src/ballFollow.cpp
 
 CMakeFiles/ballFollow.dir/src/ballFollow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ballFollow.dir/src/ballFollow.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/bwi/ros/rosbuild_ws/ardrone_fly/src/ballFollow.cpp > CMakeFiles/ballFollow.dir/src/ballFollow.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/src/ballFollow.cpp > CMakeFiles/ballFollow.dir/src/ballFollow.cpp.i
 
 CMakeFiles/ballFollow.dir/src/ballFollow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ballFollow.dir/src/ballFollow.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/bwi/ros/rosbuild_ws/ardrone_fly/src/ballFollow.cpp -o CMakeFiles/ballFollow.dir/src/ballFollow.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/src/ballFollow.cpp -o CMakeFiles/ballFollow.dir/src/ballFollow.cpp.s
 
 CMakeFiles/ballFollow.dir/src/ballFollow.cpp.o.requires:
 .PHONY : CMakeFiles/ballFollow.dir/src/ballFollow.cpp.o.requires
@@ -128,6 +128,6 @@ CMakeFiles/ballFollow.dir/clean:
 .PHONY : CMakeFiles/ballFollow.dir/clean
 
 CMakeFiles/ballFollow.dir/depend:
-	cd /home/bwi/ros/rosbuild_ws/ardrone_fly/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bwi/ros/rosbuild_ws/ardrone_fly /home/bwi/ros/rosbuild_ws/ardrone_fly /home/bwi/ros/rosbuild_ws/ardrone_fly/build /home/bwi/ros/rosbuild_ws/ardrone_fly/build /home/bwi/ros/rosbuild_ws/ardrone_fly/build/CMakeFiles/ballFollow.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build/CMakeFiles/ballFollow.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ballFollow.dir/depend
 

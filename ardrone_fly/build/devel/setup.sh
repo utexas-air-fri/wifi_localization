@@ -6,7 +6,7 @@
 # Supported command line options:
 # --extend: skips the undoing of changes from a previously sourced setup file
 
-SETUP_UTIL="/home/bwi/ros/rosbuild_ws/ardrone_fly/build/devel/_setup_util.py"
+SETUP_UTIL="/home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build/devel/_setup_util.py"
 
 if [ ! -f "$SETUP_UTIL" ]; then
   echo "Missing Python script: $SETUP_UTIL"

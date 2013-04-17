@@ -3,7 +3,7 @@
 #include "sensor_msgs/Joy.h"
 #include "std_msgs/Empty.h"
 #include "ardrone_autonomy/Navdata.h"
-// #include "ardrone_autonomy/FlightAnim.h" INCLUDE FOR ANIMATION SERVICE
+#include "ardrone_autonomy/FlightAnim.h"
 #include <string>
 
 #define _USE_MATH_DEFINES
@@ -99,16 +99,13 @@ void joyCallback(const sensor_msgs::Joy::ConstPtr& msg){
 		output.linear.y = 0;
 		output.angular.z = 0;
 		
-		/*
-		===== UNTESTED; NOT IMPLIMENTED =====
 		// Code to perform flip
-		if(false) {
+		if(msg->buttons[3] == 1) {
 			ardrone_autonomy::FlightAnim animate;
-			animate.type = 16;
-			animate.duration = 0;
+			animate.request.type = 16;
+			animate.request.duration = 0;
 			ros::service::call("ardrone/setflightanimation", animate);
 		} 
-		*/
 	}
 	
 	velocity_pub.publish(output);
