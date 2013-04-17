@@ -99,10 +99,31 @@ void joyCallback(const sensor_msgs::Joy::ConstPtr& msg){
 		output.linear.y = 0;
 		output.angular.z = 0;
 		
-		// Code to perform flip
-		if(msg->buttons[3] == 1) {
+		// Flip Forward
+		if(msg->buttons[7] == 1) {
 			ardrone_autonomy::FlightAnim animate;
 			animate.request.type = 16;
+			animate.request.duration = 0;
+			ros::service::call("ardrone/setflightanimation", animate);
+		}
+		// Flip Back
+		if(msg->buttons[6] == 1) {
+			ardrone_autonomy::FlightAnim animate;
+			animate.request.type = 17;
+			animate.request.duration = 0;
+			ros::service::call("ardrone/setflightanimation", animate);
+		} 
+		// Flip Left
+		if(msg->buttons[8] == 1) {
+			ardrone_autonomy::FlightAnim animate;
+			animate.request.type = 18;
+			animate.request.duration = 0;
+			ros::service::call("ardrone/setflightanimation", animate);
+		} 
+		// Flip Right
+		if(msg->buttons[9] == 1) {
+			ardrone_autonomy::FlightAnim animate;
+			animate.request.type = 19;
 			animate.request.duration = 0;
 			ros::service::call("ardrone/setflightanimation", animate);
 		} 
