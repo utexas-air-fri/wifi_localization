@@ -4,6 +4,7 @@
 #include "std_msgs/Empty.h"
 #include "ardrone_autonomy/Navdata.h"
 // #include "ardrone_autonomy/FlightAnim.h" INCLUDE FOR ANIMATION SERVICE
+#include <string>
 
 #define _USE_MATH_DEFINES
 #include "math.h"
@@ -13,6 +14,15 @@ ros::Publisher land_pub;
 ros::Publisher takeoff_pub;
 ros::Publisher reset_pub;
 ros::Publisher led_pub;
+
+std::string msg = 
+	"Control the ardrone.\n" 
+	"Hold the WiiMote horizontally.\n"
+	"Takeoff: [+]\t Land: [-]\n"
+	"Hover: [A]\n"
+	"Pitch/ Roll: tilt controls\n"
+	"Yaw: [1]/[2]\n"
+	"Altitude: [up]/[down]";
 
 // Global variables for Absolute Control
 bool firstZ = false;
@@ -114,6 +124,8 @@ void navCallback(const ardrone_autonomy::Navdata::ConstPtr& msg){
 }
 
 int main(int argc, char **argv){
+
+	std::cout << msg << std::endl;
 
 	ros::init(argc, argv, "follower");
 	ros::NodeHandle n;
