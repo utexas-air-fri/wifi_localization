@@ -97,6 +97,7 @@ void joyCallback(const sensor_msgs::Joy::ConstPtr& msg){
 	if(msg->buttons[2] == 1) {
 		output.linear.x = 0;
 		output.linear.y = 0;
+		output.linear.z = 0;
 		output.angular.z = 0;
 
 		// Flip Forward
