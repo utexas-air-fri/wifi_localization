@@ -32,10 +32,10 @@ CMAKE_COMMAND = /usr/bin/cmake
 RM = /usr/bin/cmake -E remove -f
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bwi/ros/rosbuild_ws/ardrone_fly
+CMAKE_SOURCE_DIR = /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bwi/ros/rosbuild_ws/ardrone_fly/build
+CMAKE_BINARY_DIR = /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/wiimoteFly.dir/depend.make
@@ -82,17 +82,17 @@ CMakeFiles/wiimoteFly.dir/src/wiimoteFly.cpp.o: /home/bwi/ros/rosbuild_ws/ardron
 CMakeFiles/wiimoteFly.dir/src/wiimoteFly.cpp.o: /home/bwi/ros/rosbuild_ws/cmvision/msg_gen/generated
 CMakeFiles/wiimoteFly.dir/src/wiimoteFly.cpp.o: /home/bwi/ros/rosbuild_ws/ardrone_autonomy/msg_gen/generated
 CMakeFiles/wiimoteFly.dir/src/wiimoteFly.cpp.o: /home/bwi/ros/rosbuild_ws/ardrone_autonomy/srv_gen/generated
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/bwi/ros/rosbuild_ws/ardrone_fly/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/wiimoteFly.dir/src/wiimoteFly.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/wiimoteFly.dir/src/wiimoteFly.cpp.o -c /home/bwi/ros/rosbuild_ws/ardrone_fly/src/wiimoteFly.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/wiimoteFly.dir/src/wiimoteFly.cpp.o -c /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/src/wiimoteFly.cpp
 
 CMakeFiles/wiimoteFly.dir/src/wiimoteFly.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/wiimoteFly.dir/src/wiimoteFly.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/bwi/ros/rosbuild_ws/ardrone_fly/src/wiimoteFly.cpp > CMakeFiles/wiimoteFly.dir/src/wiimoteFly.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -E /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/src/wiimoteFly.cpp > CMakeFiles/wiimoteFly.dir/src/wiimoteFly.cpp.i
 
 CMakeFiles/wiimoteFly.dir/src/wiimoteFly.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/wiimoteFly.dir/src/wiimoteFly.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/bwi/ros/rosbuild_ws/ardrone_fly/src/wiimoteFly.cpp -o CMakeFiles/wiimoteFly.dir/src/wiimoteFly.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -S /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/src/wiimoteFly.cpp -o CMakeFiles/wiimoteFly.dir/src/wiimoteFly.cpp.s
 
 CMakeFiles/wiimoteFly.dir/src/wiimoteFly.cpp.o.requires:
 .PHONY : CMakeFiles/wiimoteFly.dir/src/wiimoteFly.cpp.o.requires
@@ -128,6 +128,6 @@ CMakeFiles/wiimoteFly.dir/clean:
 .PHONY : CMakeFiles/wiimoteFly.dir/clean
 
 CMakeFiles/wiimoteFly.dir/depend:
-	cd /home/bwi/ros/rosbuild_ws/ardrone_fly/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bwi/ros/rosbuild_ws/ardrone_fly /home/bwi/ros/rosbuild_ws/ardrone_fly /home/bwi/ros/rosbuild_ws/ardrone_fly/build /home/bwi/ros/rosbuild_ws/ardrone_fly/build /home/bwi/ros/rosbuild_ws/ardrone_fly/build/CMakeFiles/wiimoteFly.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build /home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build/CMakeFiles/wiimoteFly.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/wiimoteFly.dir/depend
 

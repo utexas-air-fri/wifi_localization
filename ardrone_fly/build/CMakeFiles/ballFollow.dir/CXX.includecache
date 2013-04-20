@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/bwi/ros/rosbuild_ws/ardrone_fly/src/ballFollow.cpp
+/home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/src/ballFollow.cpp
 ros/ros.h
-/home/bwi/ros/rosbuild_ws/ardrone_fly/src/ros/ros.h
+/home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/src/ros/ros.h
 geometry_msgs/Twist.h
-/home/bwi/ros/rosbuild_ws/ardrone_fly/src/geometry_msgs/Twist.h
+/home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/src/geometry_msgs/Twist.h
 cmvision/Blobs.h
-/home/bwi/ros/rosbuild_ws/ardrone_fly/src/cmvision/Blobs.h
+/home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/src/cmvision/Blobs.h
 
 /home/bwi/ros/rosbuild_ws/cmvision/msg_gen/cpp/include/cmvision/Blob.h
 string

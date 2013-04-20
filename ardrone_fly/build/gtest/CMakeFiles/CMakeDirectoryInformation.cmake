@@ -3,14 +3,21 @@
 
 # Relative path conversion top directories.
 SET(CMAKE_RELATIVE_PATH_TOP_SOURCE "/usr/src/gtest")
-SET(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/bwi/ros/rosbuild_ws/ardrone_fly/build")
+SET(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/build")
 
 # Force unix paths in dependencies.
 SET(CMAKE_FORCE_UNIX_PATHS 1)
 
 # The C and CXX include file search paths:
 SET(CMAKE_C_INCLUDE_PATH
-  "/home/bwi/ros/rosbuild_ws/ardrone_fly/include"
+  "/home/bwi/ros/rosbuild_ws/bwi/ardrone_fly/include"
+  "/home/bwi/ros/rosbuild_ws/cmvision/msg/cpp"
+  "/home/bwi/ros/rosbuild_ws/cmvision/msg_gen/cpp/include"
+  "/home/bwi/ros/rosbuild_ws/ardrone_autonomy/include"
+  "/home/bwi/ros/rosbuild_ws/ardrone_autonomy/msg_gen/cpp/include"
+  "/home/bwi/ros/rosbuild_ws/ardrone_autonomy/srv_gen/cpp/include"
+  "/opt/ros/groovy/include"
+  "/opt/ros/groovy/include/opencv"
   "/usr/src/gtest/include"
   "/usr/src/gtest"
   )

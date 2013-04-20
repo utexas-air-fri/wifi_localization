@@ -3,6 +3,8 @@
 #include "sensor_msgs/Joy.h"
 #include "std_msgs/Empty.h"
 #include "ardrone_autonomy/Navdata.h"
+#include "ardrone_autonomy/FlightAnim.h"
+#include <string>
 
 #define _USE_MATH_DEFINES
 #include "math.h"
@@ -12,6 +14,15 @@ ros::Publisher land_pub;
 ros::Publisher takeoff_pub;
 ros::Publisher reset_pub;
 ros::Publisher led_pub;
+
+std::string msg = 
+	"Control the ardrone.\n" 
+	"Hold the WiiMote horizontally.\n"
+	"Takeoff: [+]\t Land: [-]\n"
+	"Hover: [A]\n"
+	"Pitch/ Roll: tilt controls\n"
+	"Yaw: [1]/[2]\n"
+	"Altitude: [up]/[down]";
 
 // Global variables for Absolute Control
 bool firstZ = false;
@@ -80,13 +91,43 @@ void joyCallback(const sensor_msgs::Joy::ConstPtr& msg){
 	if(msg->buttons[6] == 1 && msg->buttons[7] == 0)
 		output.linear.z = -1;
 	else if(msg->buttons[6] == 0 && msg->buttons[7] == 1)
-			output.linear.z = 1;
+		output.linear.z = 1;
 	
 	// If hover is on, override all axes to 0
 	if(msg->buttons[2] == 1) {
 		output.linear.x = 0;
 		output.linear.y = 0;
+		output.linear.z = 0;
 		output.angular.z = 0;
+
+		// Flip Forward
+		if(msg->buttons[7] == 1) {
+			ardrone_autonomy::FlightAnim animate;
+			animate.request.type = 16;
+			animate.request.duration = 0;
+			ros::service::call("ardrone/setflightanimation", animate);
+		}
+		// Flip Back
+		if(msg->buttons[6] == 1) {
+			ardrone_autonomy::FlightAnim animate;
+			animate.request.type = 17;
+			animate.request.duration = 0;
+			ros::service::call("ardrone/setflightanimation", animate);
+		} 
+		// Flip Left
+		if(msg->buttons[8] == 1) {
+			ardrone_autonomy::FlightAnim animate;
+			animate.request.type = 18;
+			animate.request.duration = 0;
+			ros::service::call("ardrone/setflightanimation", animate);
+		} 
+		// Flip Right
+		if(msg->buttons[9] == 1) {
+			ardrone_autonomy::FlightAnim animate;
+			animate.request.type = 19;
+			animate.request.duration = 0;
+			ros::service::call("ardrone/setflightanimation", animate);
+		}
 	}
 	
 	velocity_pub.publish(output);
@@ -102,6 +143,8 @@ void navCallback(const ardrone_autonomy::Navdata::ConstPtr& msg){
 }
 
 int main(int argc, char **argv){
+
+	std::cout << msg << std::endl;
 
 	ros::init(argc, argv, "follower");
 	ros::NodeHandle n;
