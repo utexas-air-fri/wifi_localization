@@ -1,17 +1,23 @@
 #!/usr/bin/env python
 
 import roslib; roslib.load_manifest('wifi_lookup')
-import rospy, pickle
+import rospy, pickle, sys
 from wifi_lookup.msg import WifiData, Wifi
 
-#1st goal, Completed, create a method to build a serialized database which is shared between
-#	different call-time instances of the node
-#2nd goal, Completed, redefine the database to perform the two-dimensional hash lookup
-#3rd goal, modify the listener for x,y injection
-#	make sure that the location injection prevents duplicates, it currently doesn't check
+#1st goal, Completed, create a method to build a database which
+#	is shared between different instances of the node
+#2nd goal, Completed, redefine the database to perform the
+#	two-dimensional hash lookup
+#3rd goal, Completed, modify the listener for x,y injection;
+#	location injection checks to prevent duplicates
+
+#This is the file which is loaded/stored
 dbLoc = "database.pk"
 
-#I'm not sure if all of the layers of temps and resetting are needed, but they are safe
+#This is a default location until the prompting works
+#injectLoc = (0,0)
+
+#The layers of temps and resetting are there for safe
 def inject(data):
 	for spot in data.HotSpots:
 		print spot.MAC, spot.dB
@@ -23,7 +29,8 @@ def inject(data):
 			secondTemp = firstTemp[spot.dB]
 		else:
 			secondTemp = []
-		secondTemp.append((0,0)) #currently bad
+		if(not injectLoc in secondTemp):
+			secondTemp.append(injectLoc)
 		firstTemp[spot.dB] = secondTemp
 		database[spot.MAC] = firstTemp
 	
@@ -36,12 +43,15 @@ def clean():
 #deserialize the object and do ROS things
 def make():
 	global database
+	global injectLoc
 	try:
 		dbFile = open(dbLoc)
 		database = pickle.load(dbFile)
 		dbFile.close()
 	except: 
 		database = {}
+	injectLoc = (int(sys.argv[1]), int(sys.argv[2]))
+	print injectLoc
 	rospy.Subscriber('wifi_data', WifiData, inject)
 	rospy.spin()
 
