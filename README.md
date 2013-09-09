@@ -1,6 +1,6 @@
 WiFi Lookup
 ==================
-ROS based WiFi location code developed for the Building Wide Intelligence Project at The University of Texas
+ROS based WiFi location code developed for the Building Wide Intelligence Project at The University of Texas. This branch is for a catkin specific version of the code, made for integration with ros hydro.
 
 Overview
 --------
