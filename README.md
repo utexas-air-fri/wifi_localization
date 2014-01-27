@@ -38,7 +38,7 @@ where x and y are the current coordinates of the robot's location.
 
 To save the data at this point, the node must be killed. This serializes the constructed data tables and stores the data seen to the point passed as a parameter. Simply run this node with the correct parameters, wait a second to gather data at the point, and kill the node. This process must be repeated at each location.
 
-###wifi_publisher
+###wifi_publisher (Not Working: Unfinished)
 This node requires that wifi_data be running, and a map has been built from wifi_listener
 
 To run this node, run the following command
